@@ -12,13 +12,21 @@
     margin: 0 auto;
 }
 
-header {
+header > .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header{
     background-color: rgb(75, 10, 118);
     color: white;
     padding: 16px;
     justify-content: space-between;
     align-items: center;
-    margin-bottom: 46px;
+    margin-bottom: 56px;
+    position: sticky;
+    top: 0;
 }
 
 header a:hover {
@@ -36,17 +44,21 @@ header a {
     text-decoration: none;
 }
 
+.sobre-loja {
+    margin-bottom: 56px;
+}
+
 .sobre-loja img {
     max-width: 50%;
 }
 
 .sobre-loja .container {
-    margin-left: 16px;
-    
+    margin-left: 32px;
+    padding: 8px;
 }
 
-.sobre-loja h2 {
-    margin-bottom: 8px;
+.sobre-loja h2, .produtos h2 {
+    margin-bottom: 32px;
     font-style: italic;
     color: rgb(75, 10, 118);
     font-weight: bold;
@@ -56,27 +68,28 @@ header a {
 }
 
 .produtos {
-    margin-top: 54px;
+    padding: 16px;
+    margin-bottom: 32px;
 }
 
-.produtos h2 {
-    font-style: italic;
-    color: rgb(75, 10, 118);
-    font-weight: bold;
-    font-size: 32px;
-    border-bottom: 2px solid rgb(75, 10, 118);
-    padding: 8px 0;
+.sobre-loja p {
+    font-size: 20px;
 }
 
 .produtos .container{
     display: grid;
     grid-template-columns: repeat(4, 24.25%);
     column-gap: 1%;
-    row-gap: 5%;
+    row-gap: 5%;   
 }
 
 .produtos img {
     max-width: 100%;
+}
+
+.tenis {
+    background-color: rgba(0, 0, 0, 0.1);
+    padding: 8px;
 }
 
 .tenis p{
@@ -97,22 +110,41 @@ button:hover {
     background-color: rgb(60, 8, 94);
 }
 
+footer {
+    padding: 16px;
+    background-color: rgb(75, 10, 118);
+    color: white;
+}
+
 @media screen and (max-width: 639px) {
     .container {
         max-width: 90%;
     }
 
+    header {
+        padding: 0.5em;
+    }
+
     .sobre-loja img {
         max-width: 100%;
     }
-    
+
     .sobre-loja {
         display: block;
+    }
+
+    .sobre-loja h2 {
+        margin-top: 32px;
     }
 
     .produtos .container {
         display: block;
     }
+
+    .tenis {
+        margin-bottom: 16px;
+    }
+
 }
 
 @media screen and (max-width: 1023px) and (min-width: 640px) and (orientation: portrait) {
@@ -130,6 +162,8 @@ button:hover {
 
     .sobre-loja img {
         max-width: 100%;
+        margin-bottom: 32px;
+
     }
     
     .sobre-loja {
@@ -157,5 +191,14 @@ button:hover {
         height: 3m;
         font-size: 2em;
         padding: 15px;
+    }
+
+    .tenis {
+        margin-bottom: 32px;
+    }
+
+    footer {
+        margin-top: 56px;
+        font-size: 2em;
     }
 }
